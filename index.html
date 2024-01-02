@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+<body>
+
+
+
+
+    <div class="box">
+        <div class="box1 row">
+
+            <div class="spacer col-md-2"></div>
+
+            <div class="main-message col-md-1">
+                <div id="message1" class="mensaje welcome-message oculto visible" style="position: relative;">
+                    <h1 data-heading="l">Welcome</h1>
+                    <span>
+                        <p>My name is Dayan Basulto, I'm a Computer engineer, Junior Backend Developer based in NodeJs,
+                            MongoDB and Express. I
+                            have developed some projects for small business owners.</p>
+                        <p>I am a lover of programming, logic and mathematics. I hope to be a project manager some day.
+                        </p>
+                    </span>
+                </div>
+
+                <div id="message2" class="mensaje individual-project oculto" style="position: relative;">
+                    <h3 data-heading="l">Boxes</h3>
+                    <span>
+                        <p>Page to manage cell phone decoder box service</p>
+                    </span>
+                </div>
+
+                <div id="message3" class="mensaje individual-project oculto" style="position: relative;">
+                    <h3 data-heading="l">DOTA2 Website</h3>
+                    <span>
+                        <p>DOTA2 page to manage amateur tournaments</p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="spacer col-md-2"></div>
+
+            <div class="main-proyects col-md-3">
+                <div class="main-projects">
+                    <h2>Projects</h2>
+                    <div class="project-wrapper">
+                        <div class="projects">
+                            <a onclick="mostrarMensaje(2)"><span>Phone unlock boxes</span></a>
+                            <a onclick="mostrarMensaje(3)"><span>Website for DOTA2 tournaments</span></a>
+                            <a onclick="mostrarMensaje(1)"><span>About</span></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacer col-md-2"></div>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        function mostrarMensaje(numero) {
+            // Ocultar todos los mensajes
+            document.getElementById("message1").classList.remove("visible");
+            document.getElementById("message2").classList.remove("visible");
+            document.getElementById("message3").classList.remove("visible");
+
+            document.getElementById("message1").classList.add("oculto2");
+            document.getElementById("message2").classList.add("oculto2");
+            document.getElementById("message3").classList.add("oculto2");
+
+            // Mostrar el mensaje seleccionado
+            document.getElementById("message" + numero).classList.remove("oculto2");
+
+            // Mostrar el mensaje seleccionado
+            document.getElementById("message" + numero).classList.add("visible");
+        }
+    </script>
+</body>
+
+</html>

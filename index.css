@@ -1,0 +1,364 @@
+html,
+
+:root {
+  --grad-1: #263AFB;
+  --grad-2: #2A3494;
+}
+
+body {
+  background: linear-gradient(45deg, #2D2F47 9%, #2d2d2d 100%);
+  width: 100%;
+  height: 100%;
+  font-family: cursive;
+  font-size: 5vs;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #2d2d39;
+  color: #0fa3b1;
+  user-select: none;
+  cursor: default;
+}
+
+h1 {
+  font-family: Lucida Calligraphy;
+  font-size: 50px;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+    /* Tamaño de texto para dispositivos móviles */
+  }
+
+  text-align: justify;
+  line-height: 1;
+  margin: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  letter-spacing: 0rem;
+}
+
+h1:before {
+  content: attr(data-heading);
+  position: relative;
+  overflow: hidden;
+  color: #f9f7f3;
+  width: 100%;
+  z-index: 9;
+  text-shadow: none;
+  left: 102px;
+  text-align: left;
+  -webkit-animation: flicker 3s linear infinite;
+  animation: flicker 3s linear infinite;
+}
+
+@media (max-width: 768px) {
+  h1:before {
+    left: 61px;
+    /* Otros estilos para dispositivos móviles */
+  }
+}
+
+@-webkit-keyframes flicker {
+
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+  }
+
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+@keyframes flicker {
+
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+  }
+
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mensaje {
+  animation: animacion-mensaje 2s ease-in-out;
+}
+
+@keyframes animacion-mensaje {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.box {
+  position: relative;
+  width: 148vw;
+  max-width: 1580px;
+  max-height: 850px;
+  height: 139vh;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  background: repeating-conic-gradient(from var(--q), #263AFB 0%, #263AFB 5%, transparent 5%, transparent 40%, #263AFB 50%);
+  animation: animate 8s linear infinite;
+  border-radius: 20px;
+}
+
+@property --q {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes animate {
+  0% {
+    --q: 0deg;
+  }
+
+  100% {
+    --q: 360deg;
+  }
+}
+
+.box::after {
+  content: '';
+  position: relative;
+  inset: 18px;
+  background: #2d2d39;
+  border-radius: 15px;
+  border: 8px;
+}
+
+.box1 {
+  position: absolute;
+  inset: 5px;
+  background: #222222;
+  border-radius: 15px;
+  border: 8px;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: grid;
+  grid-template-columns: 10% 40% 5% 35% 10%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -30px px;
+}
+
+.col-md-1 {
+  margin-top: 20%;
+  margin-left: 5%;
+  -ms-flex: 0 0 25%;
+  flex: 12 6 59%;
+}
+
+.col-md-2 {
+  margin-top: 20%;
+  margin-left: 5%;
+  -ms-flex: 0 0 25%;
+  flex: 12 6 59%;
+}
+
+
+.main-projects h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: Montserrat-Regular;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: Montserrat-Regular;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+div a {
+  color: #0fa3b1;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #f9f7f3;
+  letter-spacing: 1px;
+}
+
+a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+div a span {
+  transition: all .3s ease-in-out;
+  display: inline-block;
+  position: relative;
+}
+
+div a span:before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(270deg, var(--grad-2)0%, var(--grad-1)100%);
+  opacity: 1;
+  transition: all .3s ease-in-out;
+  display: inline-block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+}
+
+div a span:after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(270deg, var(--grad-1)0%, var(--grad-2)100%);
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  display: inline-block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+}
+
+.span {
+  position: relative;
+}
+
+.welcome-message::before {
+  content: " ";
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(135deg, var(--grad-1)0%, var(--grad-2)50%, var(--grad-1)100%);
+  opacity: 1;
+  border-top-left-radius: 8px;
+  transition: all .3s ease-in-out;
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: -30px;
+}
+
+.mensaje::before {
+  content: " ";
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(135deg, var(--grad-1)0%, var(--grad-2)50%, var(--grad-1)100%);
+  opacity: 1;
+  border-top-left-radius: 8px;
+  transition: all .3s ease-in-out;
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: -30px;
+}
+
+.main-projects {
+  margin-top: 20%;
+  transform-origin: 0;
+  opacity: 1;
+  transition: all .2s linear;
+  transform: scaleX(1);
+}
+
+.projects {
+  z-index: 1;
+  border-top-left-radius: 7px;
+  flex-direction: column;
+  margin-left: 0;
+  padding: 30px 30px 0;
+  display: flex;
+  position: relative;
+}
+
+.project-wrapper {
+  font-size: 18px;
+  position: relative;
+}
+
+.project-wrapper::before {
+  content: " ";
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, var(--grad-1)0%, var(--grad-2)50%, var(--grad-1)100%);
+  opacity: 1;
+  border-top-left-radius: 8px;
+  transition: all .3s ease-in-out;
+  position: absolute;
+  top: -2px;
+  bottom: 0;
+  left: -2px;
+}
+
+div.project-wrapper div {
+  z-index: 1;
+  background: #222222;
+  border-top-left-radius: 7px;
+  flex-direction: column;
+  margin-left: 0;
+  padding: 30px 30px 10px;
+  display: flex;
+  position: relative;
+}
+
+.oculto {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.oculto2 {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
