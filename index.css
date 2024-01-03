@@ -21,6 +21,49 @@ body {
   cursor: default;
 }
 
+.en {
+  color: #333;
+}
+
+.es {
+  color: #0fa3b1;
+}
+
+.check {
+  position: relative;
+  width: 50px;
+}
+
+.check::before {
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 20px;
+  background: #333;
+  border-radius: 25px;
+}
+
+.check::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 25px;
+  transition: 0.25s;
+  border: 2px solid #333;
+  box-sizing: border-box;
+}
+
+.check:checked::after {
+  left: 25px;
+  border: 2px solid #0fa3b1;
+}
+
+.check:checked::before {
+  background: #0fa3b1;
+}
+
 h1 {
   font-family: Lucida Calligraphy;
   font-size: 50px;
@@ -56,6 +99,51 @@ h1:before {
 @media (max-width: 768px) {
   h1:before {
     left: 61px;
+    /* Otros estilos para dispositivos móviles */
+  }
+}
+
+h11 {
+  display: block;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  font-family: Lucida Calligraphy;
+  font-size: 50px;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+    /* Tamaño de texto para dispositivos móviles */
+  }
+
+  text-align: justify;
+  line-height: 1;
+  margin: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  letter-spacing: 0rem;
+}
+
+h11:before {
+  content: attr(data-heading);
+  position: relative;
+  overflow: hidden;
+  color: #f9f7f3;
+  width: 100%;
+  z-index: 9;
+  text-shadow: none;
+  left: 122px;
+  text-align: left;
+  -webkit-animation: flicker 3s linear infinite;
+  animation: flicker 3s linear infinite;
+}
+
+@media (max-width: 768px) {
+  h11:before {
+    left: 72px;
     /* Otros estilos para dispositivos móviles */
   }
 }
@@ -274,7 +362,7 @@ div a span:after {
 .welcome-message::before {
   content: " ";
   width: 2px;
-  height: 100%;
+  height: -webkit-fill-available;
   background: linear-gradient(135deg, var(--grad-1)0%, var(--grad-2)50%, var(--grad-1)100%);
   opacity: 1;
   border-top-left-radius: 8px;
@@ -285,17 +373,15 @@ div a span:after {
   left: -30px;
 }
 
-.mensaje::before {
+.mensaje2::before {
   content: " ";
   width: 2px;
-  height: 100%;
+  height: -webkit-fill-available;
   background: linear-gradient(135deg, var(--grad-1)0%, var(--grad-2)50%, var(--grad-1)100%);
   opacity: 1;
   border-top-left-radius: 8px;
   transition: all .3s ease-in-out;
   position: absolute;
-  top: 50px;
-  bottom: 0;
   left: -30px;
 }
 
