@@ -203,7 +203,19 @@ h11:before {
 }
 
 .mensaje {
-  animation: animacion-mensaje 2s;
+  animation: aparecer 1s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes animacion-mensaje {
