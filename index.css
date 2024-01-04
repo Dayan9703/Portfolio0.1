@@ -97,7 +97,7 @@ h1:before {
 
 @media (max-width: 768px) {
   h1:before {
-    left: 61px;
+    left: 51px;
     /* Otros estilos para dispositivos móviles */
   }
 }
@@ -141,7 +141,7 @@ h11:before {
 
 @media (max-width: 768px) {
   h11:before {
-    left: 72px;
+    left: 59px;
     /* Otros estilos para dispositivos móviles */
   }
 }
