@@ -141,7 +141,7 @@ h11:before {
 
 @media (max-width: 768px) {
   h11:before {
-    left: 59px;
+    left: 60px;
     /* Otros estilos para dispositivos móviles */
   }
 }
