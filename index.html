@@ -19,31 +19,93 @@
     <div class="box">
         <div class="box1 row">
 
-            <div class="spacer col-md-2"></div>
+            <div class="spacer col-md-2">
+                <a onclick="mostrarMensaje(1)">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40"
+                        viewBox="0,0,256,256">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(8,8)">
+                                <path
+                                    d="M28.447,11.583c-0.18,-1.417 -1.257,-2.871 -2.817,-3.797c-1.425,-0.832 -2.82,-1.674 -4.167,-2.487c-1.407,-0.85 -2.763,-1.667 -4.045,-2.41c-0.834,-0.484 -1.791,-0.49 -2.626,-0.02c-1.409,0.794 -2.904,1.682 -4.46,2.604c-1.275,0.758 -2.591,1.54 -3.941,2.318c-1.572,0.92 -2.66,2.38 -2.84,3.812c-0.479,3.857 -0.266,7.769 0.638,11.644c0.502,1.978 2.587,4.092 4.572,4.623c2.402,0.592 4.82,0.888 7.239,0.888c2.419,0 4.837,-0.296 7.239,-0.888c0.006,-0.001 0.013,-0.003 0.019,-0.005c1.967,-0.526 4.052,-2.641 4.558,-4.637c0.9,-3.862 1.113,-7.779 0.631,-11.645zM20.115,25.303c-0.107,0.681 -0.635,1.233 -1.321,1.302c-1.856,0.188 -3.714,0.189 -5.567,0.004c-0.686,-0.069 -1.215,-0.621 -1.322,-1.302c-0.325,-2.069 -0.24,-4.138 0.255,-6.208c0.154,-0.641 0.647,-1.154 1.267,-1.38c1.722,-0.628 3.443,-0.628 5.165,0c0.62,0.226 1.113,0.739 1.267,1.38c0.496,2.068 0.581,4.136 0.256,6.204z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </div>
 
             <div class="main-message col-md-1">
                 <div id="message1" class="mensaje welcome-message oculto visible" style="position: relative;">
                     <h1 data-heading="l">Welcome</h1>
                     <span>
-                        <p>My name is Dayan Basulto, I'm a Computer engineer, Junior Backend Developer based in NodeJs,
+                        <p>
+                            My name is Dayan Basulto, I'm a Computer engineer, Junior Backend Developer based in NodeJs,
                             MongoDB and Express. I
-                            have developed some projects for small business owners.</p>
-                        <p>I am a lover of programming, logic and mathematics. I hope to be a project manager some day.
+                            have developed some projects for small business owners.
+                            <br><br>
+                            I am a lover of programming, mathematics and especially logic.
+                        </p>
+                    </span>
+
+                    <div class="email-container">
+                        <div class="email">
+                            <p class="email-address">dayan.basultoreyes@gmail.com</p>
+                            <div class="options">
+                                <a href="mailto:dayan.basultoreyes@gmail.com">Send Email</a>
+                                <a onclick="copyEmail()">Copy Email</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="message2" class="individual-project oculto" style="position: relative;">
+                    <h3 data-heading="l">
+                        Boxes
+                    </h3>
+                    <span class="mensaje2">
+                        <p>
+                            Page to manage cell phone decoder box service
                         </p>
                     </span>
                 </div>
 
-                <div id="message2" class="individual-project oculto" style="position: relative;">
-                    <h3 data-heading="l">Boxes</h3>
+                <div id="message3" class="individual-project oculto" style="position: relative;">
+                    <h3 data-heading="l">
+                        DOTA2 Website
+                    </h3>
                     <span class="mensaje2">
-                        <p>Page to manage cell phone decoder box service</p>
+                        <p>
+                            DOTA2 page to manage amateur tournaments
+                        </p>
                     </span>
                 </div>
 
-                <div id="message3" class="individual-project oculto" style="position: relative;">
-                    <h3 data-heading="l">DOTA2 Website</h3>
+                <div id="message4" class="individual-project oculto" style="position: relative;">
+                    <h3 data-heading="l">
+                        Acerca de mí
+                    </h3>
                     <span class="mensaje2">
-                        <p>DOTA2 page to manage amateur tournaments</p>
+                        <p>
+                            During my studies at university I was working there as an administrator of the Moodle
+                            platform.
+                            <br><br>
+                            After a year and a half I moved to a company as a senior specialist in charge of
+                            things other than IT security.
+                            <br><br>
+                            During my time working in each place I have focused on
+                            solving problems in the shortest time possible, as is the case of a plugin that had problems
+                            on the Moodle platform which I had not developed or had knowledge of the language that was
+                            PHP.
+                            <br><br>
+                            I am fascinated by being able to find solutions to problems using logic and whenever I need
+                            it I rely on a colleague or look for information to be able to solve it more efficiently and
+                            quickly.
+                            <br><br>
+                            I really like chess and strategy games, as well as basketball and soccer.
+                        </p>
                     </span>
                 </div>
             </div>
@@ -55,9 +117,9 @@
                     <h2>Projects</h2>
                     <div class="project-wrapper">
                         <div class="projects">
-                            <a onclick="mostrarMensaje(2)"><span>Phone unlock boxes</span></a>
-                            <a onclick="mostrarMensaje(3)"><span>Website for DOTA2 tournaments</span></a>
-                            <a onclick="mostrarMensaje(1)"><span>About</span></a>
+                            <a onclick="mostrarMensaje(2)"><span>Cell Phone Unlocking</span></a>
+                            <a onclick="mostrarMensaje(3)"><span>Tournaments Page</span></a>
+                            <a onclick="mostrarMensaje(4)"><span>About me</span></a>
 
                         </div>
                     </div>

@@ -19,33 +19,97 @@
     <div class="box">
         <div class="box1 row">
 
-            <div class="spacer col-md-2"></div>
+            <div class="spacer col-md-2">
+                <a onclick="mostrarMensaje(1)">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40"
+                        viewBox="0,0,256,256">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(8,8)">
+                                <path
+                                    d="M28.447,11.583c-0.18,-1.417 -1.257,-2.871 -2.817,-3.797c-1.425,-0.832 -2.82,-1.674 -4.167,-2.487c-1.407,-0.85 -2.763,-1.667 -4.045,-2.41c-0.834,-0.484 -1.791,-0.49 -2.626,-0.02c-1.409,0.794 -2.904,1.682 -4.46,2.604c-1.275,0.758 -2.591,1.54 -3.941,2.318c-1.572,0.92 -2.66,2.38 -2.84,3.812c-0.479,3.857 -0.266,7.769 0.638,11.644c0.502,1.978 2.587,4.092 4.572,4.623c2.402,0.592 4.82,0.888 7.239,0.888c2.419,0 4.837,-0.296 7.239,-0.888c0.006,-0.001 0.013,-0.003 0.019,-0.005c1.967,-0.526 4.052,-2.641 4.558,-4.637c0.9,-3.862 1.113,-7.779 0.631,-11.645zM20.115,25.303c-0.107,0.681 -0.635,1.233 -1.321,1.302c-1.856,0.188 -3.714,0.189 -5.567,0.004c-0.686,-0.069 -1.215,-0.621 -1.322,-1.302c-0.325,-2.069 -0.24,-4.138 0.255,-6.208c0.154,-0.641 0.647,-1.154 1.267,-1.38c1.722,-0.628 3.443,-0.628 5.165,0c0.62,0.226 1.113,0.739 1.267,1.38c0.496,2.068 0.581,4.136 0.256,6.204z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </div>
 
             <div class="main-message col-md-1">
                 <div id="message1" class="mensaje welcome-message oculto visible" style="position: relative;">
-                    <h11 data-heading="n">Bienvenido</h11>
+                    <h11 data-heading="n">
+                        Bienvenido
+                    </h11>
                     <span>
-                        <p>Mi nombre es Dayan Basulto, soy Ingeniero Informático, Junior Backend Developer basado en
+                        <p>
+                            Mi nombre es Dayan Basulto, soy Ingeniero Informático, Junior Backend Developer basado en
                             NodeJs,
-                            MongoDB y Express. I
-                            Hemos desarrollado algunos proyectos para propietarios de pequeñas empresas</p>
-                        <p>Soy amante de la programación, la lógica y las matemáticas. Espero ser gerente de proyectos
-                            algún día.
+                            MongoDB y Express.
+                            <br><br>
+                            He desarrollado algunos proyectos para propietarios de pequeñas empresas.
+                            <br><br>
+                            Soy amante de la programación, las matemáticas y sobre todo la lógica.
+                        </p>
+                    </span>
+
+                    <div class="email-container">
+                        <div class="email">
+                            <p class="email-address">dayan.basultoreyes@gmail.com</p>
+                            <div class="options">
+                                <a href="mailto:dayan.basultoreyes@gmail.com">Enviar correo</a>
+                                <a onclick="copiarEmail()">Copiar correo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="message2" class="individual-project oculto" style="position: relative;">
+                    <h3 data-heading="l">
+                        Cajas decodificadoras
+                    </h3>
+                    <span class="mensaje2">
+                        <p>
+                            Página para gestionar el servicio de caja decodificadora de celular.
                         </p>
                     </span>
                 </div>
 
-                <div id="message2" class="individual-project oculto" style="position: relative;">
-                    <h3 data-heading="l">Cajas decodificadoras</h3>
+                <div id="message3" class="individual-project oculto" style="position: relative;">
+                    <h3 data-heading="l">
+                        Página Web de DOTA2
+                    </h3>
                     <span class="mensaje2">
-                        <p>Página para gestionar el servicio de caja decodificadora de celular.</p>
+                        <p>
+                            DOTA2 página para gestionar torneos amateurs
+                        </p>
                     </span>
                 </div>
 
-                <div id="message3" class="individual-project oculto" style="position: relative;">
-                    <h3 data-heading="l">Página Web de DOTA2</h3>
+                <div id="message4" class="individual-project oculto" style="position: relative;">
+                    <h3 data-heading="l">
+                        Acerca de mí
+                    </h3>
                     <span class="mensaje2">
-                        <p>DOTA2 página para gestionar torneos amateurs</p>
+                        <p>
+                            Durante mis estudios en la universidad estuve trabajando allí como administrador de la
+                            plataforma Moodle.
+                            <br><br>
+                            Después de un año y medio me trasladé a una empresa como especialista principal a cargo de
+                            otras cosas además de la seguridad informática.
+                            <br><br>
+                            Durante mi tiempo trabajando en cada lugar me he enfocado en solucionar problemas en el
+                            menor tiempo posible, como es el caso de un complemento que tenía problemas en la plataforma
+                            Moodle el cual no había desarrollado ni tenía conocimiento del lenguaje que era PHP.
+                            <br><br>
+                            Me fascina poder encontrar soluciones a problemas usando la lógica y siempre que lo necesito
+                            me
+                            apoyo en algún compañero o busco información para poder resolverlo de manera más eficiente y
+                            rápida.
+                            <br><br>
+                            Me gusta mucho el ajedrez y los juegos de estrategia, además del baloncesto y el fútbol.
+                        </p>
                     </span>
                 </div>
             </div>
@@ -57,9 +121,9 @@
                     <h2>Proyectos</h2>
                     <div class="project-wrapper">
                         <div class="projects">
-                            <a onclick="mostrarMensaje(2)"><span>Cajas para desbloquear celulares</span></a>
-                            <a onclick="mostrarMensaje(3)"><span>Página Web para gestionar torneos de DOTA2</span></a>
-                            <a onclick="mostrarMensaje(1)"><span>Acerca de</span></a>
+                            <a onclick="mostrarMensaje(2)"><span>Desbloqueo de celulares</span></a>
+                            <a onclick="mostrarMensaje(3)"><span>Página de torneos</span></a>
+                            <a onclick="mostrarMensaje(4)"><span>Acerca de mí</span></a>
 
                         </div>
                     </div>

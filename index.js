@@ -35,14 +35,27 @@ function mostrarMensaje(numero) {
   document.getElementById("message1").classList.remove("visible");
   document.getElementById("message2").classList.remove("visible");
   document.getElementById("message3").classList.remove("visible");
+  document.getElementById("message4").classList.remove("visible");
 
   document.getElementById("message1").classList.add("oculto2");
   document.getElementById("message2").classList.add("oculto2");
   document.getElementById("message3").classList.add("oculto2");
+  document.getElementById("message4").classList.add("oculto2");
 
   // Mostrar el mensaje seleccionado
   document.getElementById("message" + numero).classList.remove("oculto2");
   document.getElementById("message" + numero).classList.add("mensaje");
   // Mostrar el mensaje seleccionado
   document.getElementById("message" + numero).classList.add("visible");
+}
+
+function copyEmail() {
+  var email = "dayan.basultoreyes@gmail.com";
+  var tempInput = document.createElement("input");
+  tempInput.value = email;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+  alert("Copied Email!");
 }
