@@ -30,18 +30,16 @@ body {
 }
 
 .email-container {
-  margin: 50px auto;
-  max-width: 300px;
+  margin: 40px;
 }
 
 .email {
-  background-color: #222;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
 }
 
 .email p {
-  margin: 0;
+  margin: auto;
 }
 
 .email .email-address {
@@ -64,11 +62,9 @@ body {
   display: block;
   color: #fff;
   text-decoration: none;
-  padding: 5px 5px;
-  border-radius: 5px;
   transition: all 0.3s ease;
   flex: 1;
-  margin: 0 15px;
+  margin-left: 15px;
 }
 
 .email .options a:hover {
