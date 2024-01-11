@@ -21,12 +21,25 @@ function fixStroke(path) {
 var check = document.querySelector(".check");
 check.addEventListener('click', idioma);
 
-function idioma() {
+/*function idioma() {
   let id = check.checked;
   if (id = true) {
     location.href = "../index.html";
   } else {
     location.href = "index.html"
+  }
+}*/
+
+async function idioma() {
+  let id = check.checked;
+  if (id = true) {
+    try {
+      await new Promise(window.location.href = '../index.html');
+    } catch (error) {
+      console.error('Error al cambiar de página', error);
+    }
+  } else {
+    await new Promise(window.location.href = 'index.html');
   }
 }
 
@@ -36,11 +49,13 @@ function mostrarMensaje(numero) {
   document.getElementById("message2").classList.remove("visible");
   document.getElementById("message3").classList.remove("visible");
   document.getElementById("message4").classList.remove("visible");
+  document.getElementById("message5").classList.remove("visible");
 
   document.getElementById("message1").classList.add("oculto2");
   document.getElementById("message2").classList.add("oculto2");
   document.getElementById("message3").classList.add("oculto2");
   document.getElementById("message4").classList.add("oculto2");
+  document.getElementById("message5").classList.add("oculto2");
 
   // Mostrar el mensaje seleccionado
   document.getElementById("message" + numero).classList.remove("oculto2");

@@ -22,7 +22,7 @@ body {
 }
 
 .en {
-  color: #333;
+  color: #ffffff;
 }
 
 .es {
@@ -30,13 +30,14 @@ body {
 }
 
 .email-container {
-  margin-top: 120px;
+  margin-top: 100px;
+}
+
+.email-container-en {
+  margin-top: 145px;
 }
 
 article {
-  background-color: rgb(15 23 42);
-  border-radius: 15px;
-  border: 2px solid rgb(51 65 85);
   padding: 5px;
 }
 
@@ -45,22 +46,20 @@ article {
 }
 
 .email .email-address {
-  font-size: 24px;
   padding: 5px;
 
   @media (max-width: 800px) {
-    font-size: 18px;
     /* Tamaño de texto para dispositivos móviles */
   }
 }
 
 .options {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 5px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .email-address {
     grid-row: 1 / 2;
     grid-column: 1 / 3;
@@ -73,25 +72,16 @@ article {
   }
 }
 
+.options2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 10px;
+}
 
 
 .container-ea {
   background: #fff;
-}
-
-a.live:hover::before {
-  content: attr(title);
-  position: absolute;
-  background: #000;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  top: -30px;
-  left: 0;
-  display: none;
-}
-a.live:hover::before {
-  display: block;
 }
 
 .options a {
@@ -99,10 +89,22 @@ a.live:hover::before {
   text-decoration: none;
   transition: all 0.3s ease;
   flex: 1;
-  margin-top: 7px;
+  margin-top: 9px;
 }
 
 .options a:hover {
+  transform: scale(1.2);
+}
+
+.options3 a {
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  flex: 1;
+  margin-top: 9px;
+}
+
+.options3 a:hover {
   transform: scale(1.2);
 }
 
@@ -133,7 +135,7 @@ a.live:hover::before {
   height: 20px;
   background: #fff;
   border-radius: 25px;
-  transition: 0.25s;
+  transition: 1.25s;
   border: 2px solid #333;
   box-sizing: border-box;
 }
@@ -149,16 +151,12 @@ a.live:hover::before {
 
 a svg {
   margin-left: 20%;
-  transition: all 0.3s ease;
 
   @media (max-width: 768px) {
     width: 60%;
   }
 }
 
-a svg:hover {
-  transform: scale(1.2);
-}
 
 h2 {
   display: flex;
@@ -480,7 +478,6 @@ div a span:after {
 }
 
 .main-projects {
-  margin-top: 20%;
   transform-origin: 0;
   opacity: 1;
   transition: all .2s linear;
