@@ -87,7 +87,7 @@ article {
 .options a {
   display: block;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   flex: 1;
   margin-top: 9px;
 }
@@ -99,7 +99,7 @@ article {
 .options3 a {
   display: block;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   flex: 1;
   margin-top: 9px;
 }
@@ -117,6 +117,8 @@ article {
   position: relative;
   width: 50px;
   cursor: pointer;
+  
+  transition: 0.5s;
 }
 
 .check::before {
@@ -124,6 +126,8 @@ article {
   position: absolute;
   width: 45px;
   height: 20px;
+  
+  transition: 0.5s;
   background: #333;
   border-radius: 25px;
 }
@@ -135,12 +139,15 @@ article {
   height: 20px;
   background: #fff;
   border-radius: 25px;
-  transition: 1.25s;
+  transition: -webkit-transform 1s ease;
   border: 2px solid #333;
   box-sizing: border-box;
 }
 
 .check:checked::after {
+  
+  
+  transition: -webkit-transform 1s ease;
   left: 25px;
   border: 2px solid #0fa3b1;
 }
@@ -305,7 +312,7 @@ h11:before {
 }
 
 .mensaje {
-  animation: aparecer 1s ease-in-out;
+  animation: aparecer 0.5s ease-in-out;
   opacity: 0;
 }
 
@@ -440,7 +447,7 @@ a:-webkit-any-link {
 }
 
 div a span {
-  transition: all .3s ease-in-out;
+  transition: all .2s ease-in-out;
   display: inline-block;
   position: relative;
 }
@@ -451,7 +458,7 @@ div a span:before {
   width: 100%;
   background: linear-gradient(270deg, var(--grad-2)0%, var(--grad-1)100%);
   opacity: 1;
-  transition: all .3s ease-in-out;
+  transition: all .2s ease-in-out;
   display: inline-block;
   position: absolute;
   bottom: -2px;
@@ -465,7 +472,7 @@ div a span:after {
   width: 100%;
   background: linear-gradient(270deg, var(--grad-1)0%, var(--grad-2)100%);
   opacity: 0;
-  transition: all .3s ease-in-out;
+  transition: all .2s ease-in-out;
   display: inline-block;
   position: absolute;
   bottom: -2px;

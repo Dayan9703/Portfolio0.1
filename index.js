@@ -31,7 +31,7 @@ check.addEventListener('click', idioma);
 }*/
 
 async function idioma() {
-  let id = check.checked;
+  let id = check.toggle;
   if (id = true) {
     try {
       await new Promise(window.location.href = 'es/index.html');
