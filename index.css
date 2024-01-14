@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
-
+/*General*/
 :root {
   --grad-1: #263AFB;
   --grad-2: #2A3494;
@@ -10,9 +9,15 @@ body {
   width: 100%;
   height: 100%;
   font-family: Poppins;
+  @media (max-width: 600px) {
+    font-family: 'Poppins', sans-serif;
+  }
   font-size: 5vs;
   display: flex;
   justify-content: space-around;
+  @media (max-width: 600px) {
+    justify-content: flex-start;
+  }
   align-items: flex-start;
   min-height: 100vh;
   background-color: #2d2d39;
@@ -21,6 +26,7 @@ body {
   cursor: default;
 }
 
+/*Idioma*/
 .en {
   color: #ffffff;
 }
@@ -29,12 +35,25 @@ body {
   color: #0fa3b1;
 }
 
+.imagenContenedor{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.imagen {
+  width: 200px; /* Ancho deseado */
+  height: auto; /* Alto deseado */
+  margin: auto;
+
+}
+
+
 .email-container {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .email-container-en {
-  margin-top: 145px;
+  margin-top: 100px;
 }
 
 article {
@@ -43,6 +62,7 @@ article {
 
 .email {
   border-radius: 10px;
+
 }
 
 .email .email-address {
@@ -117,7 +137,7 @@ article {
   position: relative;
   width: 50px;
   cursor: pointer;
-  
+
   transition: 0.5s;
 }
 
@@ -126,7 +146,7 @@ article {
   position: absolute;
   width: 45px;
   height: 20px;
-  
+
   transition: 0.5s;
   background: #333;
   border-radius: 25px;
@@ -145,8 +165,8 @@ article {
 }
 
 .check:checked::after {
-  
-  
+
+
   transition: -webkit-transform 1s ease;
   left: 25px;
   border: 2px solid #0fa3b1;
@@ -178,6 +198,7 @@ h1 {
 
   @media (max-width: 768px) {
     font-size: 30px;
+    margin-left: 20px;
     /* Tamaño de texto para dispositivos móviles */
   }
 
@@ -242,7 +263,7 @@ h11:before {
   width: 100%;
   z-index: 9;
   text-shadow: none;
-  left: 122px;
+  left: 109px;
   text-align: left;
   -webkit-animation: flicker 3s linear infinite;
   animation: flicker 3s linear infinite;
@@ -250,7 +271,7 @@ h11:before {
 
 @media (max-width: 768px) {
   h11:before {
-    left: 72px;
+    left: 65px;
     /* Otros estilos para dispositivos móviles */
   }
 }
@@ -342,8 +363,11 @@ h11:before {
   position: relative;
   width: 148vw;
   max-width: 1200px;
-  max-height: 600px;
-  min-width: 500px;
+  min-width: 700px;
+  max-height: 750px;
+  @media (max-width: 1055px) {
+    max-height: 850px;
+  }
   height: 139vh;
   margin-top: auto;
   margin-bottom: auto;
@@ -492,6 +516,7 @@ div a span:after {
 }
 
 .welcome {
+  display: grid;
   margin-top: 60px;
 }
 
